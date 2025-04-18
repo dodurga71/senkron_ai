@@ -4,7 +4,4 @@ router = APIRouter()
 
 @router.get("/status")
 async def get_status():
-    return {
-        "status": "success",
-        "message": "Senkron AI is up and running!"
-    }
+    return {"status": "success", "message": "SENKRON AI Core is online!"}

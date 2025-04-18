@@ -1,3 +1,2 @@
-# Yardımcı fonksiyonlar burada olacak
 def helper_function():
-    return "Helper working!"
+    return "Helper function working correctly!"

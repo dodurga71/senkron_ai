@@ -1,17 +1,14 @@
 from fastapi import FastAPI
-from routes.status import router as status_router
+from app.routes.status import router as status_router
+from app.routes.predict import router as predict_router
 
 app = FastAPI(
-    title="Senkron AI",
-    description="Geleceği astro-finansal örüntülerle tahmin eden yapay zeka sistemi",
+    title="SENKRON AI Core V1",
+    description="Geleceğin astro-finansal ve zaman tabanlı yapay zeka motoru.",
     version="1.0.0",
-    docs_url="/docs",     # Swagger UI aktif
-    redoc_url="/redoc"    # Alternatif ReDoc dökümanı aktif
+    docs_url="/docs",
+    redoc_url="/redoc"
 )
 
-# Ana rotaları ekliyoruz
-app.include_router(status_router)
-
-@app.get("/")
-async def root():
-    return {"message": "Welcome to SENKRON AI. API is up and running!"}
+app.include_router(status_router, prefix="/senkron")
+app.include_router(predict_router, prefix="/senkron")

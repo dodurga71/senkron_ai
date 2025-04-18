@@ -1,15 +1,13 @@
-# SENKRON AI - Genesis Edition
+# SENKRON AI Core V1
 
-Bu proje, FastAPI kullanarak hazırlanmış tam işleyen bir API sunucusudur.
+Bu proje FastAPI ile hazırlanmış, astro-finansal ve zaman tabanlı yapay zeka sisteminin çekirdek versiyonudur.
 
-## Özellikler
-- `/senkron/status` : Sistem durumu kontrolü
-- `/senkron/predict` : Örnek bir tahmin API'si
-- `/docs` : Otomatik Swagger UI dökümantasyonu
+## Özellikler:
+- `/senkron/status` ➔ Sistem durumu
+- `/senkron/predict` ➔ Basit tahmin API'si
+- `/docs` ➔ Swagger UI
+- `/redoc` ➔ ReDoc API dökümantasyonu
 
-## Başlatmak için:
+## Çalıştırmak İçin:
 - `pip install -r requirements.txt`
-- `uvicorn main:app --reload`
-
----
-Powered by Onur & Banu 🚀✨
+- `uvicorn app.main:app --reload`

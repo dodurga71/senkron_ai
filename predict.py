@@ -1,10 +1,10 @@
 from fastapi import APIRouter
-from schemas.predict_schema import PredictRequest, PredictResponse
-from services.predict_service import predict_category
+from app.schemas.predict_schema import PredictRequest, PredictResponse
+from app.services.predict_service import predict_logic
 
 router = APIRouter()
 
 @router.post("/predict", response_model=PredictResponse)
 async def predict(request: PredictRequest):
-    category = predict_category(request.value)
-    return PredictResponse(prediction=category)
+    prediction = predict_logic(request.value)
+    return PredictResponse(prediction=prediction)
