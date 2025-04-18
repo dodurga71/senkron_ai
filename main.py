@@ -1,11 +1,11 @@
 from fastapi import FastAPI
+from routes.status import router as status_router
 
-app = FastAPI()
+app = FastAPI(
+    title="SENKRON AI",
+    description="Geleceğin astro-finansal yapay zekâ motoru.",
+    version="1.0.0",
+)
 
-@app.get("/senkron/status")
-async def get_status():
-    return {
-        "message": "SENKRON AI aktif! Gelecek senkronize ediliyor!",
-        "engine": "FastAPI Quantum Engine",
-        "version": "v1.0-beta"
-    }
+# Ana routerları ekliyoruz
+app.include_router(status_router, prefix="/senkron")
