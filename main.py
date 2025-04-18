@@ -7,5 +7,4 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# Ana routerları ekliyoruz
 app.include_router(status_router, prefix="/senkron")

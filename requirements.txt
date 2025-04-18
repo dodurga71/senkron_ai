@@ -1,11 +1,3 @@
 fastapi
 uvicorn
 pydantic
-numpy
-pandas
-scipy
-skyfield
-sqlalchemy
-databases
-asyncpg
-aiohttp
