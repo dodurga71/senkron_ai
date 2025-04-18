@@ -9,4 +9,3 @@ async def get_status():
         "engine": "FastAPI Quantum Engine",
         "version": "v1.0-beta"
     }
-}
