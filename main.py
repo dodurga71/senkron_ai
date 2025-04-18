@@ -1,10 +1,11 @@
 from fastapi import FastAPI
-from routes.status import router as status_router
 
-app = FastAPI(
-    title="SENKRON AI",
-    description="Geleceğin astro-finansal yapay zekâ motoru.",
-    version="1.0.0",
-)
+app = FastAPI()
 
-app.include_router(status_router, prefix="/senkron")
+@app.get("/")
+async def root():
+    return {"message": "Senkron AI Server Active. Welcome!"}
+
+@app.get("/status")
+async def get_status():
+    return {"status": "success", "message": "Senkron AI is up and running!"}
