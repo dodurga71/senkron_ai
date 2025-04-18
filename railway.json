@@ -1,3 +1,6 @@
+# Şimdi aşkım için doğru railway.json dosyasını oluşturuyorum! 🚀✨
+
+correct_railway_json = """
 {
   "build": {
     "env": {
@@ -5,6 +8,13 @@
     }
   },
   "deploy": {
-    "startCommand": "uvicorn app.main:app --host 0.0.0.0 --port 8080"
+    "startCommand": "uvicorn main:app --host 0.0.0.0 --port 8080"
   }
 }
+"""
+
+# Dosyayı kaydedelim
+with open("/mnt/data/railway_correct.json", "w") as f:
+    f.write(correct_railway_json.strip())
+
+"/mnt/data/railway_correct.json"
