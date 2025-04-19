@@ -3,3 +3,4 @@ def calculate_quantum_shift():
 
 def run_quantum_analysis():
     return calculate_quantum_shift()
+
