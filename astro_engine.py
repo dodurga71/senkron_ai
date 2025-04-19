@@ -1,4 +1,2 @@
-# Astrolojik hesaplamalar burada olacak
-
-def calculate_astrology():
-    return 'Astro verileri'
+def generate_astro_report():
+    return "Astrolojik rapor oluşturuldu."
