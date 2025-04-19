@@ -5,3 +5,6 @@ def predict_logic(value: int) -> str:
         return "Medium"
     else:
         return "High"
+
+def make_prediction(value: int) -> str:
+    return predict_logic(value)
